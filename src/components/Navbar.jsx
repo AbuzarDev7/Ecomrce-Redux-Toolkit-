@@ -20,7 +20,7 @@ import { useSelector } from 'react-redux';
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'products', path: '/product' },
-  { name: 'Cart', path: '/singleCart' },
+  
   { name: 'Contact', path: '/contect' }
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -175,7 +175,7 @@ const cart = useSelector(state => state.cart.cart);
           {/* Cart Icon */}
           <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center', gap: 2 }}>
             <Tooltip title="Shopping Cart">
-              <IconButton onClick={() => navigate('cart')} sx={{ color: 'white' }}>
+              <IconButton onClick={() => navigate('singleCart')} sx={{ color: 'white' }}>
                 <Badge badgeContent={cart.length} color="error">
                   <ShoppingCartIcon />
                 </Badge>

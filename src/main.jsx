@@ -18,9 +18,9 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/contect" element={<Contect />} />
-        <Route path="/singleCart" element={<SingleCart />} />
+        <Route path="product" element={<Product />} />
+        <Route path="contect" element={<Contect />} />
+        <Route path="singleCart" element={<SingleCart />} />
       </Route>
     </Routes>
 </BrowserRouter>
