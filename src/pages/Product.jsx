@@ -20,6 +20,7 @@ const Product = () => {
 
   const dispatch = useDispatch();
   
+const cart = useSelector(state => state.cart.cart);
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -78,6 +79,10 @@ const Product = () => {
       </Box>
     );
   }
+const getQty = (id) => {
+  const item = cart.find(p => p.id === id);
+  return item ? item.qty : 0;
+};
 
   
   return (
@@ -144,7 +149,7 @@ const Product = () => {
                   fontWeight: 600
                 }}
               >
-                Qty : 0
+                Qty :{getQty(product.id)}
               </Button>
 
               {/* Add to Cart */}
